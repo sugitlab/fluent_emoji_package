@@ -1,5 +1,5 @@
-name: fl_icon_pkg
-description: A new Flutter project.
+name: fluent_emoji_pkg
+description: Fluent Emoji Widgets
 
 publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
