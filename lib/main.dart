@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'fluent_emoji.dart';
+import './index.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,10 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      title: 'Flutter Fluent Emoji',
+      theme: ThemeData.light(),
       home: const Home(),
     );
   }
@@ -25,11 +23,22 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: FluentEmoji(
-          FluentEmojiData.aButtonBloodType,
-          size: 80,
+        child: GridView.count(
+          crossAxisCount: 5,
+          children: const [
+            FluentEmoji(FluentEmojiData.smilingFace),
+            FluentEmoji(FluentEmojiData.smilingFaceWithHearts),
+            FluentEmoji(FluentEmojiData.faceBlowingAKiss),
+            FluentEmoji(FluentEmojiData.faceWithMonocle),
+            FluentEmoji(FluentEmojiData.faceWithMonocle),
+            FluentEmoji(FluentEmojiData.faceInClouds),
+            FluentEmoji(FluentEmojiData.cryingFace),
+            FluentEmoji(FluentEmojiData.smilingFaceWithSunglasses),
+            FluentEmoji(FluentEmojiData.thinkingFace),
+            FluentEmoji(FluentEmojiData.meltingFace),
+          ],
         ),
       ),
     );
